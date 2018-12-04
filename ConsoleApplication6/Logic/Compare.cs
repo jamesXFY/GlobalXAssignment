@@ -7,9 +7,9 @@ using ConsoleApplication6.OB;
 
 namespace ConsoleApplication6.Logic
 {
-    class Compare
+    public class Compare
     {
-        public static int comparePersons(Person personF, Person personS) {
+        public int comparePersons(Person personF, Person personS) {
 
             int heat = string.Compare(personF.lastName, personS.lastName, StringComparison.Ordinal);
             if (heat == 0) {
@@ -22,6 +22,8 @@ namespace ConsoleApplication6.Logic
                         heat= string.Compare(personF.firstNames[idx], personS.firstNames[idx], StringComparison.Ordinal);
                         if (heat != 0) {
                             break;
+                        } else if (idx== personSlen-1) {
+                            heat = 1;
                         }
                         /**
                          * need to consider something here

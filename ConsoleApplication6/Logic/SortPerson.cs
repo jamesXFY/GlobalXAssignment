@@ -7,7 +7,7 @@ using ConsoleApplication6.OB;
 
 namespace ConsoleApplication6.Logic
 {
-    class SortPerson
+    public class SortPerson
     {
         List<Person> orderedPersons = new List<Person>();
         public List<Person> transAndSort(List<string> names) {
@@ -22,7 +22,8 @@ namespace ConsoleApplication6.Logic
                     int insertIdx = orderedPersons.Count;
                     for (int idx = 0; idx < orderedPersons.Count; idx++) {
                         Person personBeCompared = orderedPersons.ElementAt(idx);
-                        int heat = Compare.comparePersons(person, personBeCompared);
+                        Compare compare = new Compare();
+                        int heat = compare.comparePersons(person, personBeCompared);
                         if (heat <= 0) {
                             // replace 
                             insertIdx = idx;                            

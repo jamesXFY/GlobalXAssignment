@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication6.OB
 {
-    class Person
+    public class Person
     {
         public string[] firstNames;
         public string lastName;
