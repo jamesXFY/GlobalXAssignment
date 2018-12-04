@@ -1,0 +1,53 @@
+Use:
+
+  The project illustrates how to perform name sorting using ASP.NET
+  
+  The detailed functionality include how to 
+  Include:
+  * how to read file
+  * how to write file
+  * how to split first names and last name
+  * how to sort name
+
+
+/////////////////////////////////////////////////////////////////////////////
+Prerequisite:
+
+Visual Studio 2015
+
+/////////////////////////////////////////////////////////////////////////////
+Demo:
+  
+* open comand in windows
+
+* go to project folder
+
+* execute name-sorter.bat file with the name input file as argument, the input file must be
+  in current folder
+  
+  name-sorter ./unsorted-names-list.txt
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+Code Logical:
+
+Step1. read unsorted name txt file and get all the names in the file line by line
+
+Step2. transfer the string names into person object list
+
+Step3. loop person object list, compare the person with already sorted persons, and then add the person into sorted person list 
+        
+Step4: using sorted person object list to write file
+
+Key components:
+
+* ReadFile class : read names from a txt file
+
+* WriteFile class : write names to a txt file
+
+* Compare class: compare tow person's names and return compared value
+
+* SortPerson class: using compared value to identify where the order of persons
+
+* Person class: the object used to store names information
